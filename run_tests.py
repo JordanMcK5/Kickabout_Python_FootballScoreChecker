@@ -1,7 +1,6 @@
-
 import unittest
  
-from tests.task_test import TestTask
+from tests.fixture_test import TestFixture
  
  
 if __name__ == '__main__':
