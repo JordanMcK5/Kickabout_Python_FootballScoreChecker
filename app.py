@@ -1,10 +1,10 @@
 from flask import Flask, render_template
 
-from controllers.fixtures_controller import fixtures_blueprint
+from controllers.teams_controller import teams_blueprint
 
 app = Flask(__name__)
 
-app.register_blueprint(fixtures_blueprint)
+app.register_blueprint(teams_blueprint)
 
 @app.route('/')
 def home():
