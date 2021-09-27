@@ -18,6 +18,9 @@ team_repository.save(team4)
 team5 = Team("Rangers")
 team_repository.save(team5)
 
+team_repository.select_all()
+
+
 fixture1 = Fixture(team1, 3, team2, 2)
 fixture_repository.save(fixture1)
 

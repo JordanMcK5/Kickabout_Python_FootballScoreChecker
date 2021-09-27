@@ -51,11 +51,9 @@ def update(team):
 
 def fixtures(team):
     fixtures = []
-
     sql = "SELECT * FROM fixtures WHERE home_team = %s or away_team =%s"
     values = [team.id, team.id]
     results = run_sql(sql, values)
-
     for row in results:
         home_team = select(row["home_team"])
         away_team = select(["away_team"])

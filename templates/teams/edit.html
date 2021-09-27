@@ -3,12 +3,10 @@
 
 <form action="/teams/{{team.id}}" method="POST">
   <div>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="{{team.name}}">
-  </div>
+    <label for="update_name">Name:</label>
+    <input type="text" id="update_name" name="update_name" value="{{team.name}}">
   </div>
   <button type="submit">Update Team</button>
-
 </form>
 
 {% endblock %}

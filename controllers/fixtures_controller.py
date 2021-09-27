@@ -18,8 +18,9 @@ def fixtures():
 # GET
 @fixtures_blueprint.route("/fixtures/new", methods=['GET'])
 def new_fixture():
+    teams = team_repository.select_all()
     fixtures = fixture_repository.select_all()
-    return render_template("fixtures/new.html", all_fixtures = fixtures)
+    return render_template("fixtures/new.html", all_fixtures = fixtures, all_teams = teams)
 
 # CREATE
 # POST
@@ -31,8 +32,8 @@ def create_fixture():
     away_score = request.form['away_score']
     home_team = team_repository.select(home_team)
     away_team = team_repository.select(away_team)
-    new_fixture = Fixture(home_team,home_score,away_team,away_score)
-    fixture_repository.save(new_fixture)
+    fixture = Fixture(home_team,home_score,away_team,away_score, id)
+    fixture_repository.save(fixture)
     return redirect('/fixtures')
 
 
