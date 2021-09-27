@@ -8,7 +8,7 @@ def save(team):
     values = [team.name]
     results = run_sql(sql, values)
     id = results[0]['id']
-    team_id = id
+    team.id = id
     return team 
 
 def select_all():
