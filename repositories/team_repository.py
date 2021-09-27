@@ -1,6 +1,7 @@
 from db.run_sql import run_sql
 from models.team import Team
 from models.fixture import Fixture
+from repositories import fixture_repository
 
 def save(team):
     sql = "INSERT INTO teams (name) VALUES (%s) RETURNING *"
@@ -51,11 +52,13 @@ def update(team):
 def fixtures(team):
     fixtures = []
 
-    sql = "SELECT * FROM fixtures WHERE team_id = %s"
-    values = [team.id]
+    sql = "SELECT * FROM fixtures WHERE home_team = %s or away_team =%s"
+    values = [team.id, team.id]
     results = run_sql(sql, values)
 
     for row in results:
-        fixture = Fixture(team, row['home_score'], team, row['away_score'], row['id'] )
+        home_team = select(row["home_team"])
+        away_team = select(["away_team"])
+        fixture = Fixture(home_team, row['home_score'], away_team, row['away_score'], row['id'])
         fixtures.append(fixture)
     return fixtures

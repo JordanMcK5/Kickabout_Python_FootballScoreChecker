@@ -1,0 +1,21 @@
+from flask import Flask, render_template, request, redirect
+from flask import Blueprint
+from models.team import Team
+from models.fixture import Fixture
+import repositories.team_repository as team_repository
+import repositories.fixture_repository as fixture_repository
+
+
+fixtures_blueprint = Blueprint("fixtures", __name__)
+
+@fixtures_blueprint.route("/fixtures")
+def fixtures():
+    fixtures = fixture_repository.select_all()
+    return render_template("fixtures/index.html", fixtures=fixtures)
+
+@fixtures_blueprint.route("/fixtures/new", methods = ["GET"])
+def new_fixtures():
+    fixtures = fixture_repository.select_all()
+    teams = team_repository.select_all()
+    return render_template("fixtures/new.html", fixtures=fixtures, teams=teams)
+
