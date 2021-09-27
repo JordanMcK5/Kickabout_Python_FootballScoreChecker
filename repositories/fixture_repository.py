@@ -17,11 +17,12 @@ def select_all():
     sql = "SELECT * FROM fixtures"
     results = run_sql(sql)
     for row in results:
-        team = team_repository.select(row['team_id'])
-        fixture = Fixture(team, row['home_score'], team, row['away_score'], row['id'] )
+        home_team = team_repository.select(row['home_team'])
+        away_team = team_repository.select(row['away_team'])
+        # team = team_repository.select(row['team_id'])
+        fixture = Fixture(home_team, row['home_score'], away_team, row['away_score'], row['id'] )
         fixtures.append(fixture)
     return fixtures
-
 
 def select(id):
     fixture = None

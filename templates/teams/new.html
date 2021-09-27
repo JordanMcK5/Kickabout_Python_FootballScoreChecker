@@ -1,12 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<section id ="new-team"></section>
-<h1>Add your team!</h1>
-<form action="/teams" method="POST" class = "new">
+
+<form action="/teams" method="POST">
   <div>
-    <label for="team_name">Team Name:</label>
-    <input type = "text" id="team_name" name="team_name" placeholder="Team Name">
-  </input>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name" required autofocus>
   </div>
 
   <button type="submit">Add Team</button>

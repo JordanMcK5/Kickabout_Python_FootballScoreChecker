@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/fixtures" method="POST">
+  <div>
+    <label for="home_team">Home Team:</label>
+    <input type="text" id="home_team" name="home_team" placeholder="home_team">
+    <label for="home_score">Home Score:</label>
+    <input type="number" id="home_score" name="home_score" placeholder="home_score">
+    <label for="away_team">Away Team:</label>
+    <input type="text" id="away_team" name="away_team" placeholder="away_team">
+    <label for="away_score">Away Score:</label>
+    <input type="number" id="away_score" name="away_score" placeholder="away_score">
+  </div>
+
+  <button type="submit">Add Fixture</button>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>{{fixture.home_team.name}}</p>
+    <p>{{fixture.home_score}}</p>
+    <p>{{fixture.away_team.name}}</p>
+    <p>{{fixture.away_score}}</p>
+    <p><a href="/fixtures/{{fixture.id}}/edit">Edit</a></p>
+  </div>
+
+{% endblock %}

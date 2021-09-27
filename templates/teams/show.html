@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>{{team.name}}</p>
+    <hr>
+    
+    <p><a href="/teams/{{team.id}}/edit">Edit Team</a></p>
+  </div>
+  <p>Fixtures</p>
+
+  {% for fixture in fixtures %}
+    <p>{{fixture.home_team.name}} {{fixture.home_score}}</p>
+    <p>{{fixture.away_team.name}} {{fixture.away_score}}</p>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+{% for fixture in all_fixtures %}
+  <div class="fixture">
+    <div class="content">
+      <div class="home_team">
+        <p>{{fixture.home_team.name}} {{fixture.home_score}} Vs {{fixture.away_team.name}} {{fixture.away_score}} </p>
+      </div>
+
+      <div class="buttons">
+
+        <form class="delete-form" action="/fixtures/{{fixture.id}}/delete" method="POST">
+          <button class="trash-button"><i class="fa fa-trash-o fa-1x" style="color:red" aria-hidden="true"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock %}
