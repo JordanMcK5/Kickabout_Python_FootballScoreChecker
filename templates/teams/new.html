@@ -2,13 +2,15 @@
 {% block content %}
 
 <form  class="new_team" action="/teams" method="POST">
+  <h1 class="all_team_heading">Add your team!</h1>
   <div>
-    <label for="name">Name:</label>
+    <label for="name">Team Name:</label>
     <input class="input_team_name" type="text" id="name" name="name" placeholder="Team Name" required autofocus>
   </div>
 
   <button class="new_team_button" type="submit">Add Team</button>
 
 </form>
-
+<h3 class="team_quote">"You start with what you believe in. I believe in building a football club rather than building a football team."</h3>
+<h4 class="team_quote_name">Sir Alex Ferguson</h4>
 {% endblock %}

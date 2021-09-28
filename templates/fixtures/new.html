@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/fixtures" method="POST">
+<form class="new_team"action="/fixtures" method="POST">
 
   <div>
       <label for='home_team'>Home Team:</label>
@@ -15,6 +15,8 @@
     <div>
     <label for="home_score">Home Score:</label>
     <input type="number" id="home_score" name="home_score" placeholder="home_score">
+    </div>
+    <div>
       <label for="away_team">Away Team:</label>
       <select id="away_team" name="away_team">
         {% for team in all_teams %}
@@ -29,15 +31,16 @@
   </div>
 
   <div>
-    <label for="home_win">Home Win?:</label>
+    <label for="home_win">Home Win?</label>
     <select id="home_win" name="home_win">
       <option value="true">True</option>
       <option value="false">False</option>
     </select>
   </div>
 
-  <button type="submit">Add Fixture</button>
+  <button class="new_team_button" type="submit">Add Fixture</button>
 
 </form>
-
+<h3 class="team_quote">"If you don’t concede any goals you’ll win more games than you lose."</h3>
+<h4 class="team_quote_name">Bobby Moore</h4>
 {% endblock %}

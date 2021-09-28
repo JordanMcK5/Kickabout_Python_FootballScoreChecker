@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-
-<form action="/teams/{{team.id}}" method="POST">
+<h1 class="all_team_heading">Edit your team!</h1>
+<form class="new_team" action="/teams/{{team.id}}" method="POST">
   <div>
-    <label for="update_name">Name:</label>
-    <input type="text" id="update_name" name="update_name" value="{{team.name}}">
+    <label class="all_team_heading" for="update_name">Name:</label>
+    <input class="input_team_name" type="text" id="update_name" name="update_name" value="{{team.name}}">
   </div>
-  <button type="submit">Update Team</button>
+  <button class="new_team_button" type="submit">Update Team</button>
 </form>
 
 {% endblock %}

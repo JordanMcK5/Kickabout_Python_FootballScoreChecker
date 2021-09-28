@@ -25,7 +25,7 @@ html > body {
       justify-content: center;
   }
   header {
-      background-color:#00ff85;
+      background-color:#38003c;
       width: 100%;
       padding: 10px;
       display: flex;
@@ -36,7 +36,6 @@ html > body {
   .header img {
     width: 100px;
     height: 25px;
-    
   }
 
   ul {
@@ -45,7 +44,7 @@ html > body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #00ff85;
+    background-color:#38003c;
   }
 
   li{
@@ -63,10 +62,11 @@ li a {
   }
   
   li a:hover {
-    background-color: rgb(81, 43, 104);
+    background-color:#00ff85;
   }
 .all_team_heading{
     color: white;
+    text-align: center;
 }
 .team_quote{
     color: white;
@@ -181,5 +181,23 @@ li a {
   
   .new_team_button:hover {opacity: 1}
 
-  }
+  .single_team_heading{
+    color: white;
+    text-align: center;}
+
+  .single_team_fixtures{
+    color: white;
+    text-align: center;}
+
+.edit_button_controller{
+    display: flex;
+    justify-content: center;}
+
+.edit_button{background-color:#00ff85 ;
+    padding: 8px;}
+
+.delete_button{
+    display: flex;
+    justify-content: center;
+    padding: 15px;}
   

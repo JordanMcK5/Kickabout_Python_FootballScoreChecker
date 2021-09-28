@@ -2,25 +2,37 @@
 {% block content %}
 
   <div>
-    <p>{{team.name}}</p>
-    <hr>
-  <p>Fixtures</p>
-
-  {% for fixture in fixtures %}
-    <p>{{fixture.home_team.name}} {{fixture.home_score}}</p>
-    <p>{{fixture.away_team.name}} {{fixture.away_score}}</p>
-
-{% endfor %}
-
-<p><a href="/teams/{{team.id}}/edit">Edit Team</a></p>
+    <h1 class="single_team_heading">{{team.name}}</h1>
+  <h2 class="single_team_fixtures">Fixtures</h2>
+    <div class="fixture_container">
+      {% for fixture in fixtures %}
+      <div class="fixture">
+          <div class="fixture_content">
+            <div class="fixture_content_inner">
+              <div class="fixture_home_team">{{fixture.home_team.name}}</div>
+              <div class="fixture_score"> {{fixture.home_score}} - {{fixture.away_score}}</div> 
+              <div class="fixture_away_team">{{fixture.away_team.name}}</div>
+            </div>
+            </div>
+            </div>
+            <div>
+            {% if fixture.home_win == True %}
+            <p class="single_team_fixtures">Home Win?</p>
+            <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+          {% else %}
+          <p>Home Win?</p>
+            <i class="fa fa-times fa-2x" style="color:red" aria-hidden="true"></i>
+          {% endif %}
+          </div>
+         {% endfor %}
+</div>
+<div class="edit_button_controller">
+<p class="edit_button"><a href="/teams/{{team.id}}/edit">Edit Team</a></p>
 </div>
 
-<div class="buttons">
-
-  <form class="delete-form" action="/teams/{{team.id}}/delete" method="POST">
-    <button class="trash-button"><i class="fa fa-trash-o fa-1x" style="color:red" aria-hidden="true"></i></button>
+<div class="delete_button">
+<form class="delete-form" action="/teams/{{team.id}}/delete" method="POST">
+    <button class="trash-button"><i class="fa fa-trash-o fa-2x" style="color:red" aria-hidden="true"></i></button>
   </form>
-</div>
-</div>
 </div>
 {% endblock %}
