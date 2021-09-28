@@ -2,12 +2,13 @@
 {% block content %}
 
 <div class="team_container">
+  <h1 class="all_team_heading">Follow your team!</h1>
 {% for team in all_teams %}
       <div class="team_name">
         <a href="/teams/{{team.id}}">{{team.name}}</a>
         </div>
-
 {% endfor %}
 </div>
-
+<h3 class="team_quote">"Some people think football is a matter of life and death. I assure you, it's much more serious than that."</h3>
+<h4 class="team_quote_name">Bill Shankly.</h4>
 {% endblock %}
