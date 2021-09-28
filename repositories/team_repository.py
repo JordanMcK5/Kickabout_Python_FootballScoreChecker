@@ -55,8 +55,8 @@ def fixtures(team):
     values = [team.id, team.id]
     results = run_sql(sql, values)
     for row in results:
-        home_team = select(row["home_team"])
+        home_team = select(["home_team"])
         away_team = select(["away_team"])
-        fixture = Fixture(home_team, row['home_score'], away_team, row['away_score'], row['id'])
+        fixture = Fixture(home_team, row['home_score'], away_team, row['away_score'],row['home_win'], row['id'])
         fixtures.append(fixture)
     return fixtures

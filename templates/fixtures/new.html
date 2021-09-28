@@ -2,8 +2,8 @@
 {% block content %}
 
 <form action="/fixtures" method="POST">
-  <div> 
-    <div>
+
+  <div>
       <label for='home_team'>Home Team:</label>
       <select id='home_team' name='home_team'>
         {% for team in all_teams %}
@@ -11,9 +11,10 @@
         {% endfor %}
       </select>
     </div>
+    
+    <div>
     <label for="home_score">Home Score:</label>
     <input type="number" id="home_score" name="home_score" placeholder="home_score">
-    <div>
       <label for="away_team">Away Team:</label>
       <select id="away_team" name="away_team">
         {% for team in all_teams %}
@@ -21,8 +22,18 @@
         {% endfor %}
       </select>
     </div>
+
+    <div>
     <label for="away_score">Away Score:</label>
     <input type="number" id="away_score" name="away_score" placeholder="away_score">
+  </div>
+
+  <div>
+    <label for="home_win">Home Win?:</label>
+    <select id="home_win" name="home_win">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select>
   </div>
 
   <button type="submit">Add Fixture</button>

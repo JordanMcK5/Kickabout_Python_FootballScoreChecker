@@ -1,0 +1,59 @@
+html > body { 
+    margin:0 auto;
+    background: url(how-to-create-cool-website-backgrounds-the-ultimate-guide.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  img {
+    display: block;
+    margin: 10px 0 0 30px;
+    /* margin-right: auto;
+    margin-top: auto;  */
+
+    width: 100%;
+  }
+  header {
+      background-color:#00ff85;
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      margin: 0%;
+      justify-content: space-between;
+  }
+
+  .header img {
+    float: left;
+    width: 100px;
+    height: 25px;
+    
+  }
+
+  ul {
+        
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00ff85;
+  }
+
+  li{
+    float: left;  
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center; 
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'League Spartan Bold', arial;
+
+  }
+  
+  li a:hover {
+    background-color: rgb(81, 43, 104);
+  }

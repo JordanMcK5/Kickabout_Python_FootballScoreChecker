@@ -4,8 +4,8 @@ from models.team import Team
 import repositories.team_repository as team_repository
 
 def save(fixture):
-    sql = "INSERT INTO fixtures (home_team, home_score, away_team, away_score) VALUES (%s, %s, %s, %s) RETURNING *"
-    values = [fixture.home_team.id, fixture.home_score, fixture.away_team.id, fixture.away_score]
+    sql = "INSERT INTO fixtures (home_team, home_score, away_team, away_score, home_win) VALUES (%s, %s, %s, %s, %s) RETURNING *"
+    values = [fixture.home_team.id, fixture.home_score, fixture.away_team.id, fixture.away_score, fixture.home_win]
     results = run_sql(sql, values)
     id = results[0]['id']
     fixture.id = id
@@ -19,8 +19,7 @@ def select_all():
     for row in results:
         home_team = team_repository.select(row['home_team'])
         away_team = team_repository.select(row['away_team'])
-        # team = team_repository.select(row['team_id'])
-        fixture = Fixture(home_team, row['home_score'], away_team, row['away_score'], row['id'] )
+        fixture = Fixture(home_team, row['home_score'], away_team, row['away_score'],row['home_win'], row['id'] )
         fixtures.append(fixture)
     return fixtures
 
@@ -31,7 +30,7 @@ def select(id):
     result = run_sql(sql, values)[0]
     if result is not None:
         team = team_repository.select(result['team_id'])
-        fixture = Fixture(team, result['home_score'], team, result['away_score'], result['id'])
+        fixture = Fixture(team, result['home_score'], team, result['away_score'], result['home_win'], result['id'])
     return fixture
 
 
@@ -46,7 +45,7 @@ def delete(id):
     run_sql(sql, values)
 
 def update(fixture):
-    sql = "UPDATE fixtures SET (home_team, home_score, away_team, away_score) VALUES (%s, %s, %s, %s) WHERE id = %s"
-    values = [fixture.home_team.id, fixture.home_score, fixture.away_team.id, fixture.away_score]
+    sql = "UPDATE fixtures SET (home_team, home_score, away_team, away_score, home_win) VALUES (%s, %s, %s, %s, %s) WHERE id = %s"
+    values = [fixture.home_team.id, fixture.home_score, fixture.away_team.id, fixture.away_score, fixture.home_win]
     run_sql(sql, values)
     
