@@ -8,14 +8,7 @@
       <div class="name">
         <a href="/teams/{{team.id}}">{{team.name}}</a>
       </div>
-      <div class="buttons">
 
-        <form class="delete-form" action="/teams/{{team.id}}/delete" method="POST">
-          <button class="trash-button"><i class="fa fa-trash-o fa-1x" style="color:red" aria-hidden="true"></i></button>
-        </form>
-      </div>
-    </div>
-  </div>
 {% endfor %}
 
 {% endblock %}

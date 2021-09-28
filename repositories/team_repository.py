@@ -45,7 +45,7 @@ def delete(id):
 
 
 def update(team):
-    sql = "UPDATE teams SET (name) = (%s) WHERE id = %s"
+    sql = "UPDATE teams SET name = %s WHERE id = %s"
     values = [team.name, team.id]
     run_sql(sql, values)
 
