@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+<div class="team_container">
 {% for team in all_teams %}
-  <div class="team">
-    <div class="content">
-      <div class="name">
+      <div class="team_name">
         <a href="/teams/{{team.id}}">{{team.name}}</a>
-      </div>
+        </div>
 
 {% endfor %}
+</div>
 
 {% endblock %}
