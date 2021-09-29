@@ -22,8 +22,8 @@ As a huge fan of [your sport], you want to stay up to date with the league. You'
 * The app should display if a game was won or lost
 
 ## Technology used:
-Visual Studio Code
-Python
-HTML
-CSS
+Visual Studio Code,
+Python,
+HTML,
+CSS.
 <img width="1438" alt="Screenshot 2021-09-29 at 11 52 34" src="https://user-images.githubusercontent.com/88345208/135255002-480aeea5-5170-49df-af2f-8c5da2697b51.png">
