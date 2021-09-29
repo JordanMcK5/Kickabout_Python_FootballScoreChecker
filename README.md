@@ -26,3 +26,4 @@ Visual Studio Code
 Python
 HTML
 CSS
+<img width="1438" alt="Screenshot 2021-09-29 at 11 52 34" src="https://user-images.githubusercontent.com/88345208/135255002-480aeea5-5170-49df-af2f-8c5da2697b51.png">
