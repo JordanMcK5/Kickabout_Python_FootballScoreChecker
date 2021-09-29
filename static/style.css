@@ -34,6 +34,7 @@ html > body {
   }
 
   .header img {
+    padding:13px 0 0 0;
     width: 100px;
     height: 25px;
   }
@@ -167,7 +168,7 @@ li a {
   .new_team_button{
     background-color: #00ff85;
     border: none;
-    color: white;
+    color: black;
     padding: 16px 32px;
     text-align: center;
     font-size: 16px;
@@ -177,6 +178,7 @@ li a {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+    font-family: 'League Spartan Bold', arial;
   }
   
   .new_team_button:hover {opacity: 1}
@@ -190,14 +192,34 @@ li a {
     text-align: center;}
 
 .edit_button_controller{
-    display: flex;
+    
+  display: flex;
     justify-content: center;}
 
-.edit_button{background-color:#00ff85 ;
-    padding: 8px;}
+.edit_button{
+  background-color:#00ff85 ;
+  padding: 16px 32px;
+}
 
 .delete_button{
     display: flex;
     justify-content: center;
     padding: 15px;}
   
+.trash-button{ background-color: #00ff85;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'League Spartan Bold', arial;
+
+}
+
+.trash-button:hover {opacity: 1}

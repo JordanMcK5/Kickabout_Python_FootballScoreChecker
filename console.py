@@ -23,16 +23,16 @@ team_repository.save(team6)
 team_repository.select_all()
 
 
-fixture1 = Fixture(team1, 3, team2, 2, True)
+fixture1 = Fixture(team1, 3, team2, 2)
 fixture_repository.save(fixture1)
 
-fixture2 = Fixture(team3, 7, team5, 1, True)
+fixture2 = Fixture(team3, 7, team5, 1)
 fixture_repository.save(fixture2)
 
-fixture3 = Fixture(team4, 5, team5, 1, True)
+fixture3 = Fixture(team4, 5, team5, 1)
 fixture_repository.save(fixture3)
 
-fixture4 = Fixture(team1, 6, team5, 2, True)
+fixture4 = Fixture(team1, 6, team5, 2)
 fixture_repository.save(fixture4)
 
 pdb.set_trace()

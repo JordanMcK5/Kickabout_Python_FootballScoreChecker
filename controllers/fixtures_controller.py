@@ -30,10 +30,9 @@ def create_fixture():
     home_score = request.form['home_score']
     away_team = request.form['away_team']
     away_score = request.form['away_score']
-    home_win = request.form['home_win']
     home_team = team_repository.select(home_team)
     away_team = team_repository.select(away_team)
-    fixture = Fixture(home_team,home_score,away_team,away_score,home_win, id)
+    fixture = Fixture(home_team,home_score,away_team,away_score, id)
     fixture_repository.save(fixture)
     return redirect('/fixtures')
 
@@ -62,10 +61,9 @@ def update_fixture(id):
     home_score = request.form['home_score']
     away_team = request.form['away_team']
     away_score = request.form['away_score']
-    home_win = request.form['home_win']
     home_team = team_repository.select(home_team)
     away_team = team_repository.select(away_team)
-    fixture = Fixture(home_team,home_score,away_team,away_score,home_win)
+    fixture = Fixture(home_team,home_score,away_team,away_score)
     fixture_repository.update(fixture)
     return redirect('/fixtures')
 

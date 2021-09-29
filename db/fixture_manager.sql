@@ -11,6 +11,5 @@ CREATE TABLE fixtures (
   home_team INT REFERENCES teams(id) ON DELETE CASCADE,
   home_score INT,
   away_team INT REFERENCES teams(id) ON DELETE CASCADE,
-  away_score INT,
-  home_win BOOLEAN
+  away_score INT
 );

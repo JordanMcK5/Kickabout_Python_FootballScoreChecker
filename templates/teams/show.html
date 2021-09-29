@@ -15,15 +15,6 @@
             </div>
             </div>
             </div>
-            <div>
-            {% if fixture.home_win == True %}
-            <p class="single_team_fixtures">Home Win?</p>
-            <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
-          {% else %}
-          <p>Home Win?</p>
-            <i class="fa fa-times fa-2x" style="color:red" aria-hidden="true"></i>
-          {% endif %}
-          </div>
          {% endfor %}
 
 </div>
@@ -33,7 +24,7 @@
 
 <div class="delete_button">
 <form class="delete-form" action="/teams/{{team.id}}/delete" method="POST">
-    <button class="trash-button"><i class="fa fa-trash-o fa-2x" style="color:red" aria-hidden="true"></i></button>
+    <button class="trash-button">Delete Team</button>
   </form>
 </div>
 {% endblock %}
