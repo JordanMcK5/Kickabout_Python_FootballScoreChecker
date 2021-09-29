@@ -5,6 +5,9 @@
 ## HOW TO RUN-
 
 To launch Kickabout: 
+-Via VS Code, created a database in the terminal (createdb "database name")
+- Run "psql -d "database name" -f db/fixture_manager.sql"
+- Run "python3 console.py" in terminal to upodate tables with data.
 -type "flask run"
 -open chrome and enter the following URL:
 http://localhost:5000/
